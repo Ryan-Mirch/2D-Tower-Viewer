@@ -1,0 +1,77 @@
+[gd_scene load_steps=3 format=3 uid="uid://cxrfqq4mfggur"]
+
+[ext_resource type="PackedScene" uid="uid://cspub6hru2ag" path="res://Selector.tscn" id="1_ls7ns"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5to3g"]
+
+[node name="Tower Tester" type="Node2D"]
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+offset_left = 15.0
+offset_top = 15.0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_use_custom_anchors = true
+
+[node name="Artillery" parent="VBoxContainer" instance=ExtResource( "1_ls7ns" )]
+offset_right = 200.0
+offset_bottom = 93.0
+sprite = NodePath("../../CurrentArtillery")
+
+[node name="HSeparator" type="HSeparator" parent="VBoxContainer"]
+offset_top = 97.0
+offset_right = 200.0
+offset_bottom = 113.0
+theme_override_constants/separation = 16
+theme_override_styles/separator = SubResource( "StyleBoxEmpty_5to3g" )
+
+[node name="Turret" parent="VBoxContainer" instance=ExtResource( "1_ls7ns" )]
+offset_top = 117.0
+offset_right = 200.0
+offset_bottom = 210.0
+directory = "res://Turrets"
+sprite = NodePath("../../CurrentTurret")
+
+[node name="HSeparator2" type="HSeparator" parent="VBoxContainer"]
+offset_top = 214.0
+offset_right = 200.0
+offset_bottom = 230.0
+theme_override_constants/separation = 16
+theme_override_styles/separator = SubResource( "StyleBoxEmpty_5to3g" )
+
+[node name="Foundation" parent="VBoxContainer" instance=ExtResource( "1_ls7ns" )]
+offset_top = 234.0
+offset_right = 200.0
+offset_bottom = 327.0
+directory = "res://Foundations"
+sprite = NodePath("../../CurrentFoundation")
+
+[node name="HSeparator3" type="HSeparator" parent="VBoxContainer"]
+offset_top = 331.0
+offset_right = 200.0
+offset_bottom = 347.0
+theme_override_constants/separation = 16
+theme_override_styles/separator = SubResource( "StyleBoxEmpty_5to3g" )
+
+[node name="Tile" parent="VBoxContainer" instance=ExtResource( "1_ls7ns" )]
+offset_top = 351.0
+offset_right = 200.0
+offset_bottom = 444.0
+directory = "res://Tiles"
+sprite = NodePath("../../CurrentTile")
+
+[node name="CurrentTile" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+centered = false
+
+[node name="CurrentFoundation" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+centered = false
+
+[node name="CurrentTurret" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+centered = false
+
+[node name="CurrentArtillery" type="Sprite2D" parent="."]
+scale = Vector2(0.5, 0.5)
+centered = false

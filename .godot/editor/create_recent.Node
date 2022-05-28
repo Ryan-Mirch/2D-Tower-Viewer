@@ -1,0 +1,10 @@
+HSeparator
+VBoxContainer
+Panel
+TextureButton
+Sprite2D
+TextureRect
+GridContainer
+Label
+HBoxContainer
+OptionButton

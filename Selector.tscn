@@ -1,0 +1,92 @@
+[gd_scene load_steps=2 format=3 uid="uid://cspub6hru2ag"]
+
+[ext_resource type="Script" path="res://Selector.gd" id="1_742sf"]
+
+[node name="Artillery" type="VBoxContainer"]
+offset_right = 95.0
+offset_bottom = 31.0
+script = ExtResource( "1_742sf" )
+directory = "res://Artilleries"
+
+[node name="Label" type="Label" parent="."]
+offset_right = 200.0
+offset_bottom = 23.0
+
+[node name="Options" type="OptionButton" parent="."]
+minimum_size = Vector2(200, 0)
+offset_top = 27.0
+offset_right = 200.0
+offset_bottom = 58.0
+
+[node name="@@102665" type="PopupMenu" parent="Options"]
+
+[node name="@@102660" type="MarginContainer" parent="Options/@@102665"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="@@102661" type="ScrollContainer" parent="Options/@@102665/@@102660"]
+offset_right = 1100.0
+offset_bottom = 1100.0
+
+[node name="@@102662" type="Control" parent="Options/@@102665/@@102660/@@102661"]
+offset_right = 1100.0
+offset_bottom = 1100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="_h_scroll" type="HScrollBar" parent="Options/@@102665/@@102660/@@102661"]
+offset_right = 16.0
+offset_bottom = 8.0
+
+[node name="_v_scroll" type="VScrollBar" parent="Options/@@102665/@@102660/@@102661"]
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="@@102663" type="Timer" parent="Options/@@102665"]
+wait_time = 0.3
+one_shot = true
+
+[node name="@@102664" type="Timer" parent="Options/@@102665"]
+wait_time = 0.3
+one_shot = true
+
+[node name="Variations" type="OptionButton" parent="."]
+minimum_size = Vector2(200, 0)
+offset_top = 62.0
+offset_right = 200.0
+offset_bottom = 93.0
+
+[node name="@@102671" type="PopupMenu" parent="Variations"]
+
+[node name="@@102666" type="MarginContainer" parent="Variations/@@102671"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+
+[node name="@@102667" type="ScrollContainer" parent="Variations/@@102671/@@102666"]
+offset_right = 1100.0
+offset_bottom = 1100.0
+
+[node name="@@102668" type="Control" parent="Variations/@@102671/@@102666/@@102667"]
+offset_right = 1100.0
+offset_bottom = 1100.0
+size_flags_horizontal = 3
+size_flags_vertical = 3
+
+[node name="_h_scroll" type="HScrollBar" parent="Variations/@@102671/@@102666/@@102667"]
+offset_right = 16.0
+offset_bottom = 8.0
+
+[node name="_v_scroll" type="VScrollBar" parent="Variations/@@102671/@@102666/@@102667"]
+offset_right = 8.0
+offset_bottom = 16.0
+
+[node name="@@102669" type="Timer" parent="Variations/@@102671"]
+wait_time = 0.3
+one_shot = true
+
+[node name="@@102670" type="Timer" parent="Variations/@@102671"]
+wait_time = 0.3
+one_shot = true
+
+[connection signal="item_selected" from="Options" to="." method="_on_options_item_selected"]
+[connection signal="item_selected" from="Variations" to="." method="_on_variations_item_selected"]
